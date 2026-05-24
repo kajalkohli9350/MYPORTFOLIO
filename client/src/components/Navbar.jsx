@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-
+import { FaDownload} from "react-icons/fa";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,8 +46,8 @@ function Navbar() {
         </div>
 
         <a className="navbar-resume" href="/resume.pdf" download>
-          <span className="download-icon" aria-hidden="true">
-            ⤓
+          <span className="download-icon" >
+          <FaDownload/>
           </span>
           Download Resume
         </a>
