@@ -12,7 +12,6 @@ function Navbar() {
         </a>
 
         <div className="navbar-actions">
-
           <button
             className={`navbar-hamburger ${menuOpen ? "open" : ""}`}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -23,7 +22,6 @@ function Navbar() {
             <span />
             <span />
           </button>
-
         </div>
 
         <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
@@ -47,12 +45,12 @@ function Navbar() {
           </a>
         </div>
 
-         <a className="navbar-resume" href="/resume.pdf" download>
-            <span className="download-icon" aria-hidden="true">
-              ⤓
-            </span>
-            Download Resume
-          </a>
+        <a className="navbar-resume" href="/resume.pdf" download>
+          <span className="download-icon" aria-hidden="true">
+            ⤓
+          </span>
+          Download Resume
+        </a>
       </div>
     </nav>
   );
