@@ -37,9 +37,7 @@ function Navbar() {
           <a href="#projects" onClick={() => setMenuOpen(false)}>
             Projects
           </a>
-          <a href="#certificates" onClick={() => setMenuOpen(false)}>
-            Certificates
-          </a>
+          
           <a href="#contact" onClick={() => setMenuOpen(false)}>
             Contact
           </a>

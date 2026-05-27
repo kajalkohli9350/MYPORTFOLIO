@@ -39,7 +39,7 @@ function Projects() {
         </div>
           <div className="project-card">
           <div className="description">
-            <img src="/assets/project2img.png" alt="Project 2" className="project-image" />
+            <img src="/assets/clonepic.png" alt="Project 2" className="project-image" />
             <h3>CromTech Clone</h3>
             <p>
               A clone of the CromTech website built with React and styled-components.
@@ -68,16 +68,15 @@ function Projects() {
         </div>
           <div className="project-card">
           <div className="description">
-            <img src="/assets/project3img.png" alt="Project 3" className="project-image" />
+            <img src="/assets/project3pic.png" alt="Project 3" className="project-image" />
             <h3>Project 3</h3>
             <p>
-              A mental wellness web application to supports mental health and
-              wellness
+            A Mylearnhub built with React and styled-components, providing an interactive learning platform.
             </p>
           </div>
           <div className="project-link-container">
             <a
-            href="https://mind-wellness-app-z9yo.vercel.app/"
+            href="#"
               className="project-link1"
               target="_blank"
               rel="noopener noreferrer"
@@ -86,7 +85,7 @@ function Projects() {
             </a>
             
             <a
-              href="https://github.com/kajalkohli9350"
+              href="https://github.com/kajalkohli9350/mylearnhub"
                             className="project-link2"
 
               target="_blank"
