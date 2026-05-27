@@ -35,10 +35,10 @@ function About() {
           </span>
         </div>
         <div className="icon-details">
-          <p>Kajal Kohli</p>
-          <p>Software Developer</p>
-          <p>Panipat, Haryana</p>
-          <p>kohlikajal00@gmail.com</p>
+          <span>Kajal Kohli</span>
+          <span>Software Developer</span>
+          <span>Panipat, Haryana</span>
+          <span>kohlikajal00@gmail.com</span>
         </div>
       </div>
     </section>

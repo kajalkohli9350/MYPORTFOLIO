@@ -1,0 +1,133 @@
+
+.contact-section{
+    align-items: center;
+    background: #131d34;
+    padding: 20px;
+    text-align: center;
+    
+}
+ 
+h2{
+    display: inline-block;
+    font-size: 28px;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom:solid  rgb(138, 54, 180);
+    padding-bottom: 10px;
+    background-color: transparent;
+
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(21, 37, 59);
+}
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+   gap: 35px;
+
+}
+.icon-details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: white;
+    background-color: transparent;
+    margin:auto;
+    gap: 30px;
+
+}
+.icon-details span {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    gap: 30px;
+}
+.contact-icons span {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    gap: 30px;
+}
+
+.contact-input1{
+    display: flex;
+    flex-direction: row;
+   gap: 20px;
+
+    background-color: rgb(21, 37, 59);
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: transparent;
+
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(21, 37, 59);
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background-color: rgb(21, 37, 59);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contact-input1 input{
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-input2{
+    width: 100%;
+}
+
+.contact-textarea{
+    width: 100%;
+    min-height: 50px;
+    resize: vertical;
+}
+
+.contact-button{
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: rgb(138, 54, 180);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-details {
+        flex-direction: row;
+        align-items: center;
+    }
+    .contact-input1 {
+        flex-direction: column;
+    }
+}
