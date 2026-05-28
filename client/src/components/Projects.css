@@ -29,6 +29,21 @@
   height: 380px;
   width: 350px;
 }
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+  }
+  .description p {
+    width: 100%;
+  }
+}
 .description img {
   width: 100%;
   height: 180px;

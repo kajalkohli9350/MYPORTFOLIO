@@ -130,6 +130,7 @@ margin-top:auto;
     display: flex;
     height: 230px;
     width: 300px;
+    max-width: 100%;
     border-radius: 8px;
     background-color: transparent;
     box-sizing: content-box;
@@ -149,6 +150,10 @@ margin-top:auto;
     }
     .contact-input1 {
         flex-direction: column;
+    }
+    .socialpic {
+        width: 90%;
+        height: auto;
     }
 }
 

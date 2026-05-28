@@ -5,7 +5,7 @@ import { useState } from "react";
 function Home() {
   const [active, setActive] = useState("work");
   return (
-    <section className="home">
+    <section  id="home" className="home">
       <div className="leftcontaioner">
         <div className="homecontainer">
           <h2>Hi, I'm</h2>
@@ -24,7 +24,7 @@ function Home() {
         </div>
         <div className="homebtn">
           <a
-            href="mywork"
+            href="#projects"
             className={`btn-primary ${active === "work" ? "active" : "inactive"}`}
             onClick={() => setActive("work")}
           >

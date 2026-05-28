@@ -4,8 +4,34 @@
   font-family: 'Arial', sans-serif;
  
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 20px;
   margin-left:50px;
   margin-right:50px;
+}
+
+/* Global responsive adjustments */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 8px;
+  }
+  html, body, #root {
+    font-size: 14px;
+  }
 }

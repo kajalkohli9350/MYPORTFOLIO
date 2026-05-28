@@ -43,7 +43,7 @@ function Navbar() {
           </a>
         </div>
 
-        <a className="navbar-resume" href="/resume.pdf" download>
+        <a className="navbar-resume" href="/assets/resume.pdf" download="Kajal_Resume.pdf">
           <span className="download-icon" >
           <FaDownload/>
           </span>

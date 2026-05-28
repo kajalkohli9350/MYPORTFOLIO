@@ -4,7 +4,7 @@ import { FcNext } from "react-icons/fc";
 import "./Projects.css";
 function Projects() {
   return (
-    <div className="projects-section">
+    <div id="projects" className="projects-section">
       <h2 className="projects-heading">Projects</h2>
       <div className="projects-container">
         <div className="project-card">

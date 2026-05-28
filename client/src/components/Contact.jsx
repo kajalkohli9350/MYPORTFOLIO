@@ -8,7 +8,7 @@ FaRegPaperPlane,
 import "./Contact.css";
 function Contact() {
   return (
-    <div className="contact-section">
+    <div id="contact" className="contact-section">
       <h2 className="contact-heading">Contact Me</h2>
       <div className="container">
         {/* <div className="contact-details"> */}
