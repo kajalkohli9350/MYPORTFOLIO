@@ -73,6 +73,7 @@ margin-top:auto;
     flex-direction: row;
     gap: 30px;
     background-color: transparent;
+    justify-content: space-around
 
 }
 .contact-form{
