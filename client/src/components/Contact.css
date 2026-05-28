@@ -31,7 +31,9 @@ h2{
     display: flex;
     flex-direction: column;
     background-color: transparent;
-   gap: 35px;
+   gap: 42px;
+   line-height: 1;
+
 
 }
 .icon-details {
@@ -42,7 +44,8 @@ h2{
     background-color: transparent;
     margin:auto;
     gap: 30px;
-
+line-height: 1.5;
+margin-top:auto;
 }
 .icon-details span {
     display: flex;
@@ -118,7 +121,38 @@ h2{
     border: none;
     cursor: pointer;
 }
+.contact-button span{
+
+    background-color: transparent;
+}
+
+.socialpic{
+    display: flex;
+    height: 230px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: transparent;
+    box-sizing: content-box;
+    overflow: hidden;
+    
+}
+
+
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-details {
+        flex-direction: row;
+        align-items: center;
+    }
+    .contact-input1 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 889px) {
     .container {
         flex-direction: column;
         align-items: center;

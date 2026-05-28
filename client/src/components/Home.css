@@ -32,6 +32,23 @@
   font-size: 0.805rem;
 
 }
+
+/* Active state: button looks like primary */
+.btn-primary.active,
+.btn-secondary.active{
+  background-color: #443176d4;
+  color: white;
+  /* border:1px solid #dad6e4; */
+}
+
+/* Inactive / transparent state */
+.btn-primary.inactive,
+.btn-secondary.inactive{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.915);
+  border:1px solid #dad6e4;
+  opacity: 0.7;
+}
 .home p {
     color:rgb(201, 195, 201);
   font-size: 18px;
@@ -48,6 +65,19 @@
   color: #9f9bdbf4;
 }
 
+.homecontainer h2{
+  border-bottom: none;
+margin:auto;
+
+}
+.homecontainer{
+ 
+  /* align-items:left; */
+  /* justify-content:left; */
+  /* gap:1rem; */
+  margin-top: 2.5rem;
+  line-height: 0.5;
+}
 @media (max-width: 768px) {
   .home {
     grid-template-columns: 1fr;

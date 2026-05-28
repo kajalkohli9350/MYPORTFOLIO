@@ -3,6 +3,7 @@ import {
   FaGithub,
   FaMapMarkerAlt,
   FaEnvelope,
+FaRegPaperPlane,
 } from "react-icons/fa";
 import "./Contact.css";
 function Contact() {
@@ -29,7 +30,7 @@ function Contact() {
               required
             ></textarea>
             <button type="submit" className="contact-button">
-              Send Message
+              Send Message <span><FaRegPaperPlane /></span>
             </button>
           </form>
         {/* </div> */}
@@ -55,6 +56,9 @@ function Contact() {
             <span>Panipat, Haryana</span>
             <span>kohlikajal00@gmail.com</span>
           </div>
+        </div>
+        <div className="socialpic">
+            <img src="/assets/contackpic.jpg" alt="Contact" className="contact-pic" />
         </div>
       </div>
     </div>

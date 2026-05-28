@@ -1,6 +1,9 @@
 import "./Home.css";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
+
 function Home() {
+  const [active, setActive] = useState("work");
   return (
     <section className="home">
       <div className="leftcontaioner">
@@ -20,10 +23,18 @@ function Home() {
           </p>
         </div>
         <div className="homebtn">
-          <a href="mywork" className="btn-primary">
+          <a
+            href="mywork"
+            className={`btn-primary ${active === "work" ? "active" : "inactive"}`}
+            onClick={() => setActive("work")}
+          >
             View My work
           </a>
-          <a href="#contact" className="btn-secondary">
+          <a
+            href="#contact"
+            className={`btn-secondary ${active === "contact" ? "active" : "inactive"}`}
+            onClick={() => setActive("contact")}
+          >
             Contact Me
           </a>
         </div>
