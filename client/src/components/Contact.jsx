@@ -3,36 +3,96 @@ import {
   FaGithub,
   FaMapMarkerAlt,
   FaEnvelope,
-FaRegPaperPlane,
+  FaRegPaperPlane,
 } from "react-icons/fa";
 import "./Contact.css";
+import { useState } from "react";
+import axios from "axios";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/contact",
+        formData,
+      );
+
+      alert("Message Sent Successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message");
+    }
+  };
   return (
     <div id="contact" className="contact-section">
       <h2 className="contact-heading">Contact Me</h2>
       <div className="container">
         {/* <div className="contact-details"> */}
-          <form className="contact-form">
-            <div className="contact-input1">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-            </div>
-
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="contact-input1">
             <input
               type="text"
-              placeholder="Subject"
-              className="contact-input2"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
-            <textarea
-              placeholder="Your Message"
-              className="contact-textarea"
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
               required
-            ></textarea>
-            <button type="submit" className="contact-button">
-              Send Message <span><FaRegPaperPlane /></span>
-            </button>
-          </form>
+            />
+          </div>
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className="contact-input2"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            className="contact-textarea"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button type="submit" className="contact-button">
+            Send Message{" "}
+            <span>
+              <FaRegPaperPlane />
+            </span>
+          </button>
+        </form>
         {/* </div> */}
 
         <div className="contact-details">
@@ -58,7 +118,11 @@ function Contact() {
           </div>
         </div>
         <div className="socialpic">
-            <img src="/assets/contackpic.jpg" alt="Contact" className="contact-pic" />
+          <img
+            src="/assets/contackpic.jpg"
+            alt="Contact"
+            className="contact-pic"
+          />
         </div>
       </div>
     </div>
