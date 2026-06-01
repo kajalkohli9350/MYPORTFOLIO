@@ -14,6 +14,7 @@ app.use("/api/contact", contactRoutes);
 app.get("/", (req, res) => {
   res.send("Portfolio API Running Successfully");
 });
+
 mongoose
 .connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))

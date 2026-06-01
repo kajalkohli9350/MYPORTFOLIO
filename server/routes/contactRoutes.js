@@ -29,5 +29,20 @@ router.post("/", async (req, res) => {
 
 // GET all form submissions (for client to fetch)
 
+router.get("/", async (req, res) => {
+  try {
+    // fetch all contacts, newest first
+    const contacts = await Contact.find().sort({ createdAt: -1 });
+
+    return res.status(200).json({
+      success: true,
+      count: contacts.length,
+      data: contacts,
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 
 module.exports = router;
