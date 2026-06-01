@@ -28,6 +28,17 @@
   cursor: pointer;
   height: 380px;
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* subtle lift on hover */
+  transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease, border-color 0.25s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.55);
+  border-color: rgba(138, 54, 180, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -50,6 +61,8 @@
   border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   /* margin-bottom: 5px; */
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(.2,.9,.2,1), filter 0.35s ease;
 }
 .description {
     text-align: left;
@@ -68,6 +81,9 @@
     padding-left: 10px;
  width: 70%;
   
+}
+.description p{
+  transition: color 0.25s ease;
 }
 .project-link-container {
   display: flex;

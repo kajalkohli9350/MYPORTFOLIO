@@ -27,4 +27,7 @@ router.post("/", async (req, res) => {
 
 });
 
+// GET all form submissions (for client to fetch)
+
+
 module.exports = router;

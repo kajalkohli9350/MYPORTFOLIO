@@ -41,6 +41,17 @@ border:solid #131d34;
   background: transparent;
 }
 
+.skill-card:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(2,6,23,0.45);
+  border-color: rgba(138,54,180,0.6);
+}
+
+@media (max-width: 480px){
+  .skill-card{ width: 86px; height: 86px; }
+  .skill-icon{ font-size: 2.2rem; margin-bottom: 8px; }
+}
+
 .skill-card h4 {
   color: white;
   font-size: 1rem;

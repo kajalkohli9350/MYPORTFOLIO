@@ -16,6 +16,9 @@
     background-color: rgb(21, 37, 59);
     margin-top: 40px;
 }
+.about-section, .about-details, .about-container, .about-icons{
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
 .about-icons {
     display: flex;
     flex-direction: column;
@@ -66,6 +69,49 @@ background-color: transparent;
     line-height: 1.6;
     background-color: transparent;
 
+}
+/* responsive tweaks */
+@media (max-width: 1024px){
+    .about-section{ padding: 36px; gap: 30px; }
+    .about-container{ max-width: 420px; }
+}
+@media (max-width: 768px) {
+                .about-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+                }
+                 .about-container h1{
+                        justify-content: center;
+                }
+                .about-container {
+                margin-right: 0;
+                }
+                .about-icons {
+                justify-content: center;
+                margin-top: 8px;
+                width: 100%;
+                }
+                .about-icons span {
+                        gap: 10px;
+                }
+                .icon-details {
+                margin-top: 20px;
+                text-align: left;
+
+                }
+                .about-details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                 gap: 10px;
+                 padding: 8px;
+                }
+        }
+
+/* small hover lift for larger screens */
+@media (hover: hover) and (min-width: 769px){
+    .about-section:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.45); }
 }
 /* .about-details{
     display: flex;

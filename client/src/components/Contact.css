@@ -96,6 +96,7 @@ margin-top:auto;
     font-size: 12px;
     box-sizing: border-box;
     outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 
 .contact-input1 input{
@@ -121,6 +122,7 @@ margin-top:auto;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 .contact-button span{
 
@@ -156,6 +158,17 @@ margin-top:auto;
         width: 90%;
         height: auto;
     }
+}
+
+/* focus states */
+.contact-form input:focus, .contact-form textarea:focus{
+    border-color: rgba(138,54,180,0.9);
+    box-shadow: 0 8px 20px rgba(138,54,180,0.12);
+    transform: translateY(-2px);
+}
+.contact-button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.35);
 }
 
 @media (max-width: 889px) {
