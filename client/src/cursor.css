@@ -1,0 +1,73 @@
+:root {
+  --cursor-dot-size: 10px;
+  --cursor-ring-size: 36px;
+  /* Accent color used for outlines/glow; dot will be transparent to reveal underlying content */
+  --cursor-color: #06b6d4;
+  --cursor-ring-color: rgba(6, 182, 212, 0.22);
+}
+
+.custom-cursor,
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  /* Follow pointer instantly: avoid transition on transform/position */
+  transition: opacity 140ms ease;
+  opacity: 0;
+  z-index: 9999;
+}
+
+.custom-cursor {
+  width: var(--cursor-dot-size);
+  height: var(--cursor-dot-size);
+  border-radius: 999px;
+  /* Make dot transparent so content beneath remains visible */
+  background: transparent;
+  border: 2px solid var(--cursor-color);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.12),
+    0 8px 28px rgba(6, 182, 212, 0.12);
+  mix-blend-mode: normal; /* keep default blending so underlying content is visible */
+}
+
+.custom-cursor-ring {
+  width: var(--cursor-ring-size);
+  height: var(--cursor-ring-size);
+  border-radius: 999px;
+  border: 2px solid var(--cursor-ring-color);
+  transform-origin: center;
+  backdrop-filter: blur(0.5px);
+  background: transparent;
+}
+
+.custom-cursor.visible,
+.custom-cursor-ring.visible {
+  opacity: 1;
+}
+
+.custom-cursor-ring.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.35);
+  border-color: rgba(6, 182, 212, 0.42);
+}
+.custom-cursor.cursor-hover {
+  transform: translate(-50%, -50%) scale(0.75);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+}
+
+.custom-cursor.cursor-active,
+.custom-cursor-ring.cursor-active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* Hide on touch devices and respect reduced motion */
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .custom-cursor,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+  body {
+    cursor: auto;
+  }
+}

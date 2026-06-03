@@ -1,0 +1,199 @@
+:root {
+  --motion-duration: 480ms;
+  --motion-ease: cubic-bezier(0.22, 0.8, 0.28, 1);
+  --stagger-step: 60ms;
+}
+
+/* Responsive motion tuning */
+@media (max-width: 640px) {
+  :root {
+    --motion-duration: 360ms;
+    --stagger-step: 40ms;
+  }
+  .animate {
+    transform: translateY(10px);
+  }
+  .animate.anim-slide-left,
+  .animate.anim-slide-right {
+    transform: translateX(12px);
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --motion-duration: 520ms;
+    --stagger-step: 80ms;
+  }
+  .animate {
+    transform: translateY(18px);
+  }
+  .animate.anim-slide-left,
+  .animate.anim-slide-right {
+    transform: translateX(28px);
+  }
+}
+
+/* Base: elements to animate */
+.animate {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+  will-change: transform, opacity;
+}
+
+/* When in view, reset transform and show */
+.animate.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger children: start hidden */
+.animate > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity calc(var(--motion-duration) - 150ms) var(--motion-ease),
+    transform calc(var(--motion-duration) - 150ms) var(--motion-ease);
+}
+.animate > *.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Images subtle lift on view */
+.animate img {
+  opacity: 0;
+  transform: scale(0.99) translateY(8px);
+  transition:
+    transform var(--motion-duration) var(--motion-ease),
+    opacity var(--motion-duration) var(--motion-ease);
+}
+.animate.in-view img {
+  opacity: 1;
+  transform: none;
+}
+
+/* Interactive elements hover/press transitions */
+a,
+button,
+.btn-primary,
+.btn-secondary,
+.project-link1,
+.project-link2 {
+  transition:
+    transform 220ms var(--motion-ease),
+    color 180ms var(--motion-ease),
+    opacity 180ms var(--motion-ease);
+}
+a:hover,
+button:hover,
+.btn-primary:hover,
+.project-link1:hover {
+  transform: translateY(-3px);
+}
+
+/* Subtle floating animation for icons */
+@keyframes float-slow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.skill-icon svg,
+.download-icon svg {
+  transition: transform 360ms var(--motion-ease);
+}
+.skill-icon:hover svg,
+.download-icon:hover svg {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Footer and small elements */
+.footer {
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+}
+
+/* Variant helpers - add classes like anim-slide-left, anim-slide-right, anim-slide-up, anim-slide-down, anim-zoom, anim-fade */
+.animate.anim-slide-left {
+  transform: translateX(-24px);
+}
+.animate.anim-slide-left.in-view {
+  transform: none;
+}
+.animate.anim-slide-right {
+  transform: translateX(24px);
+}
+.animate.anim-slide-right.in-view {
+  transform: none;
+}
+.animate.anim-slide-up {
+  transform: translateY(24px);
+}
+.animate.anim-slide-up.in-view {
+  transform: none;
+}
+.animate.anim-slide-down {
+  transform: translateY(-24px);
+}
+.animate.anim-slide-down.in-view {
+  transform: none;
+}
+.animate.anim-zoom {
+  transform: scale(0.96);
+}
+.animate.anim-zoom.in-view {
+  transform: none;
+}
+.animate.anim-fade {
+  transform: none;
+  opacity: 0;
+}
+.animate.anim-fade.in-view {
+  opacity: 1;
+}
+
+/* When variant is applied to children directly (for per-element control) */
+.animate > .anim-slide-left {
+  transform: translateX(-18px);
+}
+.animate > .anim-slide-left.in-view {
+  transform: none;
+}
+.animate > .anim-slide-right {
+  transform: translateX(18px);
+}
+.animate > .anim-slide-right.in-view {
+  transform: none;
+}
+.animate > .anim-slide-up {
+  transform: translateY(18px);
+}
+.animate > .anim-slide-up.in-view {
+  transform: none;
+}
+.animate > .anim-zoom {
+  transform: scale(0.95);
+}
+.animate > .anim-zoom.in-view {
+  transform: none;
+}
+
+/* Utility: reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration: 0ms;
+  }
+  .animate,
+  .animate > *,
+  .animate img {
+    transition-duration: 0ms !important;
+  }
+}

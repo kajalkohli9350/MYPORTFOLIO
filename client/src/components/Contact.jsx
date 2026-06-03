@@ -20,9 +20,7 @@ function Contact() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-      
     });
-
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,11 +45,15 @@ function Contact() {
     }
   };
   return (
-    <div id="contact" className="contact-section">
+    <div id="contact" className="contact-section animate" data-anim="fade">
       <h2 className="contact-heading">Contact Me</h2>
       <div className="container">
         {/* <div className="contact-details"> */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form
+          className="contact-form animate"
+          data-anim="slide-left"
+          onSubmit={handleSubmit}
+        >
           <div className="contact-input1">
             <input
               type="text"
@@ -97,7 +99,7 @@ function Contact() {
         </form>
         {/* </div> */}
 
-        <div className="contact-details">
+        <div className="contact-details animate" data-anim="slide-right">
           <div className="contact-icons">
             <span>
               <FaEnvelope /> Email:
@@ -119,7 +121,7 @@ function Contact() {
             <span>kohlikajal00@gmail.com</span>
           </div>
         </div>
-        <div className="socialpic">
+        <div className="socialpic animate" data-anim="zoom">
           <img
             src="/assets/contackpic.jpg"
             alt="Contact"

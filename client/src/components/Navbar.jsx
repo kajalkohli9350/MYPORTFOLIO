@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Navbar.css";
-import { FaDownload} from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar-custom">
+    <nav className="navbar-custom animate" data-anim="slide-down">
       <div className="navbar-inner">
         <a className="navbar-brand" href="#home">
           Kajal
@@ -37,15 +37,19 @@ function Navbar() {
           <a href="#projects" onClick={() => setMenuOpen(false)}>
             Projects
           </a>
-          
+
           <a href="#contact" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
         </div>
 
-        <a className="navbar-resume" href="/assets/resume.pdf" download="Kajal_Resume.pdf">
-          <span className="download-icon" >
-          <FaDownload/>
+        <a
+          className="navbar-resume"
+          href="/assets/resume.pdf"
+          download="Kajal_Resume.pdf"
+        >
+          <span className="download-icon">
+            <FaDownload />
           </span>
           Download Resume
         </a>

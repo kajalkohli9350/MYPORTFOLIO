@@ -5,8 +5,8 @@ import { useState } from "react";
 function Home() {
   const [active, setActive] = useState("work");
   return (
-    <section  id="home" className="home">
-      <div className="leftcontaioner">
+    <section id="home" className="home">
+      <div className="leftcontaioner animate" data-anim="slide-left">
         <div className="homecontainer">
           <h2>Hi, I'm</h2>
           <h1 className="text-primary">Kajal</h1>
@@ -61,7 +61,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="homeimg">
+      <div className="homeimg animate" data-anim="zoom">
         <img src="/assets/portfoliopic.png" alt="mypic" className="homeimg" />
       </div>
     </section>

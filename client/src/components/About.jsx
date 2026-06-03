@@ -7,8 +7,8 @@ import {
 } from "react-icons/fa";
 function About() {
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
+    <section id="about" className="about-section animate" data-anim="fade">
+      <div className="about-container animate" data-anim="slide-left">
         <h1>About Me</h1>
         <p>
           Hello! I'm a passionate software developer with a love for creating
