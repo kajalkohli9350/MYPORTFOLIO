@@ -45,7 +45,7 @@ function Navbar() {
 
         <a
           className="navbar-resume"
-          href="/assets/resume.pdf"
+          href="/assets/kajalkohli.pdf"
           download="Kajal_Resume.pdf"
         >
           <span className="download-icon">
