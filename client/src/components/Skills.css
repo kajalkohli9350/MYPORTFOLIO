@@ -41,6 +41,7 @@ border:solid #131d34;
   background: transparent;
 }
 
+
 .skill-card:hover{
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 28px rgba(2,6,23,0.45);
@@ -56,4 +57,10 @@ border:solid #131d34;
   color: white;
   font-size: 1rem;
   background: transparent;
+}
+.skill-card.animate svg{
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.skill-icon svg{
+  color: #3fdaeb;
 }
