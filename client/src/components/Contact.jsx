@@ -115,10 +115,10 @@ function Contact() {
             </span>
           </div>
           <div className="icon-details">
-            <span>Kajal Kohli</span>
-            <span>Software Developer</span>
-            <span>Panipat, Haryana</span>
             <span>kohlikajal00@gmail.com</span>
+            <span>panipat, Haryana</span>
+            <span>kajal-kohli-119866326</span>
+            <span>kajalkohli9350</span>
           </div>
         </div>
         <div className="socialpic animate" data-anim="zoom">

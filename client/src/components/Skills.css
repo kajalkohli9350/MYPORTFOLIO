@@ -58,9 +58,38 @@ border:solid #131d34;
   font-size: 1rem;
   background: transparent;
 }
-.skill-card.animate svg{
-  transition: transform 0.3s ease, color 0.3s ease;
+
+
+/* Per-skill colors */
+
+.skill-icon.skill-html svg * {
+  fill: #E34F26; /* HTML orange */
 }
-.skill-icon svg{
-  color: #3fdaeb;
+
+.skill-icon.skill-css svg * {
+  fill: #1572B6; /* CSS blue */
+}
+
+.skill-icon.skill-js svg * {
+  fill: #F7DF1E; /* JavaScript yellow */
+}
+
+.skill-icon.skill-react svg * {
+  fill: #61DAFB; /* React cyan */
+}
+
+.skill-icon.skill-node svg * {
+  fill: #68A063; /* Node green */
+}
+
+.skill-icon.skill-express svg * {
+  fill: #e6e0e0; /* Express black */
+}
+
+.skill-icon.skill-mongo svg * {
+  fill: #47A248; /* MongoDB green */
+}
+
+.skill-icon.skill-github svg * {
+  fill: #e3dfdf; /* GitHub dark */
 }
